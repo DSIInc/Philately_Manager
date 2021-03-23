@@ -1,0 +1,10 @@
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\bin\Debug\Philately_Manager.exe.config
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\bin\Debug\Philately_Manager.exe
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\bin\Debug\Philately_Manager.pdb
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\obj\Debug\Philately_Manager.csprojAssemblyReference.cache
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\obj\Debug\Philately_Manager.Form1.resources
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\obj\Debug\Philately_Manager.Properties.Resources.resources
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\obj\Debug\Philately_Manager.csproj.GenerateResource.cache
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\obj\Debug\Philately_Manager.csproj.CoreCompileInputs.cache
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\obj\Debug\Philately_Manager.exe
+C:\Users\kovpa\Desktop\Курсач\Philately_Manager\obj\Debug\Philately_Manager.pdb
