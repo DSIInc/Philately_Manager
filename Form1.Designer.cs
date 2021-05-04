@@ -54,21 +54,27 @@ namespace Philately_Manager
             this.addButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Owners = new System.Windows.Forms.TabPage();
-            this.Marks = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marks = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.downloadDataGridView2 = new System.Windows.Forms.Button();
+            this.updateDataGridView2 = new System.Windows.Forms.Button();
+            this.deleteDataGridView2 = new System.Windows.Forms.Button();
+            this.addDataGridView2 = new System.Windows.Forms.Button();
+            this.IDOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Country_Owner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mark_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mark_Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.actionsBlock.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Owners.SuspendLayout();
-            this.Marks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Marks.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -79,7 +85,7 @@ namespace Philately_Manager
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(875, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(906, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,28 +103,28 @@ namespace Philately_Manager
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
             // 
@@ -151,10 +157,10 @@ namespace Philately_Manager
             this.year,
             this.circulation,
             this.features});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(647, 211);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -195,18 +201,19 @@ namespace Philately_Manager
             this.actionsBlock.Controls.Add(this.deleteButton);
             this.actionsBlock.Controls.Add(this.addButton);
             this.actionsBlock.Dock = System.Windows.Forms.DockStyle.Right;
-            this.actionsBlock.Location = new System.Drawing.Point(658, 24);
+            this.actionsBlock.Location = new System.Drawing.Point(656, 3);
             this.actionsBlock.Name = "actionsBlock";
-            this.actionsBlock.Size = new System.Drawing.Size(217, 261);
+            this.actionsBlock.Size = new System.Drawing.Size(239, 211);
             this.actionsBlock.TabIndex = 3;
             this.actionsBlock.TabStop = false;
             this.actionsBlock.Text = "Дії";
+            this.actionsBlock.Enter += new System.EventHandler(this.actionsBlock_Enter);
             // 
             // downloadButton
             // 
             this.downloadButton.Location = new System.Drawing.Point(6, 63);
             this.downloadButton.Name = "downloadButton";
-            this.downloadButton.Size = new System.Drawing.Size(185, 23);
+            this.downloadButton.Size = new System.Drawing.Size(227, 23);
             this.downloadButton.TabIndex = 4;
             this.downloadButton.Text = "Загрузить";
             this.downloadButton.UseVisualStyleBackColor = true;
@@ -216,7 +223,7 @@ namespace Philately_Manager
             // 
             this.updateButton.Location = new System.Drawing.Point(6, 150);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(185, 23);
+            this.updateButton.Size = new System.Drawing.Size(227, 23);
             this.updateButton.TabIndex = 2;
             this.updateButton.Text = "Обновить";
             this.updateButton.UseVisualStyleBackColor = true;
@@ -226,7 +233,7 @@ namespace Philately_Manager
             // 
             this.deleteButton.Location = new System.Drawing.Point(6, 121);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(185, 23);
+            this.deleteButton.Size = new System.Drawing.Size(227, 23);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -236,7 +243,7 @@ namespace Philately_Manager
             // 
             this.addButton.Location = new System.Drawing.Point(6, 92);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(185, 23);
+            this.addButton.Size = new System.Drawing.Size(227, 23);
             this.addButton.TabIndex = 0;
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
@@ -248,88 +255,143 @@ namespace Philately_Manager
             this.tabControl1.Controls.Add(this.Marks);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(658, 261);
+            this.tabControl1.Size = new System.Drawing.Size(906, 243);
             this.tabControl1.TabIndex = 4;
             // 
             // Owners
             // 
+            this.Owners.Controls.Add(this.groupBox1);
             this.Owners.Controls.Add(this.dataGridView2);
             this.Owners.Location = new System.Drawing.Point(4, 22);
             this.Owners.Name = "Owners";
             this.Owners.Padding = new System.Windows.Forms.Padding(3);
-            this.Owners.Size = new System.Drawing.Size(650, 235);
+            this.Owners.Size = new System.Drawing.Size(898, 217);
             this.Owners.TabIndex = 0;
             this.Owners.Text = "Власники";
             this.Owners.UseVisualStyleBackColor = true;
             this.Owners.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // Marks
-            // 
-            this.Marks.Controls.Add(this.dataGridView1);
-            this.Marks.Location = new System.Drawing.Point(4, 22);
-            this.Marks.Name = "Marks";
-            this.Marks.Padding = new System.Windows.Forms.Padding(3);
-            this.Marks.Size = new System.Drawing.Size(650, 235);
-            this.Marks.TabIndex = 1;
-            this.Marks.Text = "Марки";
-            this.Marks.UseVisualStyleBackColor = true;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IDOwner,
+            this.Surname,
+            this.Name,
+            this.Country_Owner,
+            this.Mark_Code,
+            this.Mark_Count});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(644, 229);
+            this.dataGridView2.Size = new System.Drawing.Size(643, 211);
             this.dataGridView2.TabIndex = 3;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // Marks
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.Marks.Controls.Add(this.dataGridView1);
+            this.Marks.Controls.Add(this.actionsBlock);
+            this.Marks.Location = new System.Drawing.Point(4, 22);
+            this.Marks.Name = "Marks";
+            this.Marks.Padding = new System.Windows.Forms.Padding(3);
+            this.Marks.Size = new System.Drawing.Size(898, 217);
+            this.Marks.TabIndex = 1;
+            this.Marks.Text = "Марки";
+            this.Marks.UseVisualStyleBackColor = true;
+            this.Marks.Click += new System.EventHandler(this.Marks_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // groupBox1
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Призвіще";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.groupBox1.Controls.Add(this.downloadDataGridView2);
+            this.groupBox1.Controls.Add(this.updateDataGridView2);
+            this.groupBox1.Controls.Add(this.deleteDataGridView2);
+            this.groupBox1.Controls.Add(this.addDataGridView2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Location = new System.Drawing.Point(652, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(243, 211);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Дії";
             // 
-            // dataGridViewTextBoxColumn3
+            // downloadDataGridView2
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ім\'я";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.downloadDataGridView2.Location = new System.Drawing.Point(8, 50);
+            this.downloadDataGridView2.Name = "downloadDataGridView2";
+            this.downloadDataGridView2.Size = new System.Drawing.Size(227, 23);
+            this.downloadDataGridView2.TabIndex = 8;
+            this.downloadDataGridView2.Text = "Загрузить";
+            this.downloadDataGridView2.UseVisualStyleBackColor = true;
+            this.downloadDataGridView2.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridViewTextBoxColumn4
+            // updateDataGridView2
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Країна";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.updateDataGridView2.Location = new System.Drawing.Point(8, 137);
+            this.updateDataGridView2.Name = "updateDataGridView2";
+            this.updateDataGridView2.Size = new System.Drawing.Size(227, 23);
+            this.updateDataGridView2.TabIndex = 7;
+            this.updateDataGridView2.Text = "Обновить";
+            this.updateDataGridView2.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // deleteDataGridView2
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Код марки";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.deleteDataGridView2.Location = new System.Drawing.Point(8, 108);
+            this.deleteDataGridView2.Name = "deleteDataGridView2";
+            this.deleteDataGridView2.Size = new System.Drawing.Size(227, 23);
+            this.deleteDataGridView2.TabIndex = 6;
+            this.deleteDataGridView2.Text = "Удалить";
+            this.deleteDataGridView2.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // addDataGridView2
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Кількість";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.addDataGridView2.Location = new System.Drawing.Point(8, 79);
+            this.addDataGridView2.Name = "addDataGridView2";
+            this.addDataGridView2.Size = new System.Drawing.Size(227, 23);
+            this.addDataGridView2.TabIndex = 5;
+            this.addDataGridView2.Text = "Добавить";
+            this.addDataGridView2.UseVisualStyleBackColor = true;
+            this.addDataGridView2.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // IDOwner
+            // 
+            this.IDOwner.HeaderText = "ID";
+            this.IDOwner.Name = "IDOwner";
+            // 
+            // Surname
+            // 
+            this.Surname.HeaderText = "Призвіще";
+            this.Surname.Name = "Surname";
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Ім\'я";
+            this.Name.Name = "Name";
+            // 
+            // Country_Owner
+            // 
+            this.Country_Owner.HeaderText = "Країна";
+            this.Country_Owner.Name = "Country_Owner";
+            // 
+            // Mark_Code
+            // 
+            this.Mark_Code.HeaderText = "Код марки";
+            this.Mark_Code.Name = "Mark_Code";
+            // 
+            // Mark_Count
+            // 
+            this.Mark_Count.HeaderText = "Кількість";
+            this.Mark_Count.Name = "Mark_Count";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 285);
+            this.ClientSize = new System.Drawing.Size(906, 267);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.actionsBlock);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -343,8 +405,9 @@ namespace Philately_Manager
             this.actionsBlock.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Owners.ResumeLayout(false);
-            this.Marks.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Marks.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,12 +440,17 @@ namespace Philately_Manager
         private System.Windows.Forms.TabPage Owners;
         private System.Windows.Forms.TabPage Marks;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button downloadDataGridView2;
+        private System.Windows.Forms.Button updateDataGridView2;
+        private System.Windows.Forms.Button deleteDataGridView2;
+        private System.Windows.Forms.Button addDataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDOwner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Country_Owner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mark_Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mark_Count;
     }
 }
 
