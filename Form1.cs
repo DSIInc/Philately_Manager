@@ -171,6 +171,7 @@ namespace Philately_Manager
 
         private void downloadButton_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             //Створюємо з'єднанання
             string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database1.mdb"; //строка з'єднання
             OleDbConnection dbConnection = new OleDbConnection(connectionString); //створюємо з'єднання
@@ -207,7 +208,8 @@ namespace Philately_Manager
 
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
         }
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -365,6 +367,7 @@ namespace Philately_Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView2.Rows.Clear();
             //Створюємо з'єднанання
             string connectionString = "provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database1.mdb"; //строка з'єднання
             OleDbConnection dbConnection = new OleDbConnection(connectionString); //створюємо з'єднання
@@ -531,6 +534,16 @@ namespace Philately_Manager
         private void действиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.Clear();
+        }
+
+        private void clearbtn2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
         }
     }
 }

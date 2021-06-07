@@ -41,7 +41,13 @@ namespace Philately_Manager
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.m_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.country = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.circulation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionsBlock = new System.Windows.Forms.GroupBox();
+            this.clearbtn2 = new System.Windows.Forms.Button();
             this.downloadButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -49,6 +55,7 @@ namespace Philately_Manager
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Owners = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.downloadDataGridView2 = new System.Windows.Forms.Button();
             this.updateDataGridView2 = new System.Windows.Forms.Button();
             this.deleteDataGridView2 = new System.Windows.Forms.Button();
@@ -61,11 +68,6 @@ namespace Philately_Manager
             this.Mark_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mark_Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marks = new System.Windows.Forms.TabPage();
-            this.m_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.country = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.circulation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.actionsBlock.SuspendLayout();
@@ -103,28 +105,28 @@ namespace Philately_Manager
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.загрузитьToolStripMenuItem.Text = "Загрузить";
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.загрузитьToolStripMenuItem.Text = "Очистить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // обновитьToolStripMenuItem
             // 
             this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
-            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.обновитьToolStripMenuItem.Text = "Обновить";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
             // 
@@ -163,8 +165,34 @@ namespace Philately_Manager
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // m_code
+            // 
+            this.m_code.HeaderText = "ID";
+            this.m_code.Name = "m_code";
+            // 
+            // country
+            // 
+            this.country.HeaderText = "Країна";
+            this.country.Name = "country";
+            // 
+            // cost
+            // 
+            this.cost.HeaderText = "Вартість";
+            this.cost.Name = "cost";
+            // 
+            // year
+            // 
+            this.year.HeaderText = "Рік";
+            this.year.Name = "year";
+            // 
+            // circulation
+            // 
+            this.circulation.HeaderText = "Тираж";
+            this.circulation.Name = "circulation";
+            // 
             // actionsBlock
             // 
+            this.actionsBlock.Controls.Add(this.clearbtn2);
             this.actionsBlock.Controls.Add(this.downloadButton);
             this.actionsBlock.Controls.Add(this.updateButton);
             this.actionsBlock.Controls.Add(this.deleteButton);
@@ -177,6 +205,16 @@ namespace Philately_Manager
             this.actionsBlock.TabStop = false;
             this.actionsBlock.Text = "Дії";
             this.actionsBlock.Enter += new System.EventHandler(this.actionsBlock_Enter);
+            // 
+            // clearbtn2
+            // 
+            this.clearbtn2.Location = new System.Drawing.Point(7, 165);
+            this.clearbtn2.Name = "clearbtn2";
+            this.clearbtn2.Size = new System.Drawing.Size(227, 23);
+            this.clearbtn2.TabIndex = 10;
+            this.clearbtn2.Text = "Очистить";
+            this.clearbtn2.UseVisualStyleBackColor = true;
+            this.clearbtn2.Click += new System.EventHandler(this.clearbtn2_Click);
             // 
             // downloadButton
             // 
@@ -245,6 +283,7 @@ namespace Philately_Manager
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.clearBtn);
             this.groupBox1.Controls.Add(this.downloadDataGridView2);
             this.groupBox1.Controls.Add(this.updateDataGridView2);
             this.groupBox1.Controls.Add(this.deleteDataGridView2);
@@ -256,6 +295,16 @@ namespace Philately_Manager
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Дії";
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(8, 166);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(227, 23);
+            this.clearBtn.TabIndex = 9;
+            this.clearBtn.Text = "Очистить";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // downloadDataGridView2
             // 
@@ -357,31 +406,6 @@ namespace Philately_Manager
             this.Marks.UseVisualStyleBackColor = true;
             this.Marks.Click += new System.EventHandler(this.Marks_Click);
             // 
-            // m_code
-            // 
-            this.m_code.HeaderText = "ID";
-            this.m_code.Name = "m_code";
-            // 
-            // country
-            // 
-            this.country.HeaderText = "Країна";
-            this.country.Name = "country";
-            // 
-            // cost
-            // 
-            this.cost.HeaderText = "Вартість";
-            this.cost.Name = "cost";
-            // 
-            // year
-            // 
-            this.year.HeaderText = "Рік";
-            this.year.Name = "year";
-            // 
-            // circulation
-            // 
-            this.circulation.HeaderText = "Тираж";
-            this.circulation.Name = "circulation";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +470,8 @@ namespace Philately_Manager
         private System.Windows.Forms.DataGridViewTextBoxColumn cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn year;
         private System.Windows.Forms.DataGridViewTextBoxColumn circulation;
+        private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Button clearbtn2;
     }
 }
 
