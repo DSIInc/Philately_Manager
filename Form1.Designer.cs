@@ -302,7 +302,7 @@ namespace Philately_Manager
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(227, 23);
             this.clearBtn.TabIndex = 9;
-            this.clearBtn.Text = "Очистить";
+            this.clearBtn.Text = "Очистити";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
@@ -312,7 +312,7 @@ namespace Philately_Manager
             this.downloadDataGridView2.Name = "downloadDataGridView2";
             this.downloadDataGridView2.Size = new System.Drawing.Size(227, 23);
             this.downloadDataGridView2.TabIndex = 8;
-            this.downloadDataGridView2.Text = "Загрузить";
+            this.downloadDataGridView2.Text = "Завантажити";
             this.downloadDataGridView2.UseVisualStyleBackColor = true;
             this.downloadDataGridView2.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -322,7 +322,7 @@ namespace Philately_Manager
             this.updateDataGridView2.Name = "updateDataGridView2";
             this.updateDataGridView2.Size = new System.Drawing.Size(227, 23);
             this.updateDataGridView2.TabIndex = 7;
-            this.updateDataGridView2.Text = "Обновить";
+            this.updateDataGridView2.Text = "Оновити";
             this.updateDataGridView2.UseVisualStyleBackColor = true;
             this.updateDataGridView2.Click += new System.EventHandler(this.updateDataGridView2_Click);
             // 
@@ -332,7 +332,7 @@ namespace Philately_Manager
             this.deleteDataGridView2.Name = "deleteDataGridView2";
             this.deleteDataGridView2.Size = new System.Drawing.Size(227, 23);
             this.deleteDataGridView2.TabIndex = 6;
-            this.deleteDataGridView2.Text = "Удалить";
+            this.deleteDataGridView2.Text = "Видалити";
             this.deleteDataGridView2.UseVisualStyleBackColor = true;
             this.deleteDataGridView2.Click += new System.EventHandler(this.deleteDataGridView2_Click);
             // 
@@ -342,7 +342,7 @@ namespace Philately_Manager
             this.addDataGridView2.Name = "addDataGridView2";
             this.addDataGridView2.Size = new System.Drawing.Size(227, 23);
             this.addDataGridView2.TabIndex = 5;
-            this.addDataGridView2.Text = "Добавить";
+            this.addDataGridView2.Text = "Додати";
             this.addDataGridView2.UseVisualStyleBackColor = true;
             this.addDataGridView2.Click += new System.EventHandler(this.button4_Click);
             // 
